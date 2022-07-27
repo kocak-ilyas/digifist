@@ -24,7 +24,9 @@ function App() {
                 </span>
               </div>
               <div className='m-5'>
-                <a href="/" className='headerLink'>Shop all everyday items</a>
+                <a href='/' className='headerLink'>
+                  Shop all everyday items
+                </a>
               </div>
             </div>
             {/* <hr /> */}
@@ -41,23 +43,23 @@ function App() {
                           <span
                             className={selectedColorId === 1 ? "dotSelected" : "dot"}
                             onClick={() => setSelectedColorId(1)}
-                            style={{ backgroundColor: selectedColorId === 1 ? "white" : "green" }}>
+                            style={{ backgroundColor: selectedColorId === 1 ? "white" : "#99C3CC" }}>
                             {selectedColorId === 1 && (
                               <span
                                 className='dotSelectedInline'
                                 onClick={() => setSelectedColorId(1)}
-                                style={{ backgroundColor: "green" }}></span>
+                                style={{ backgroundColor: "#99C3CC" }}></span>
                             )}
                           </span>
                           <span
                             className={selectedColorId === 2 ? "dotSelected" : "dot"}
                             onClick={() => setSelectedColorId(2)}
-                            style={{ backgroundColor: selectedColorId === 2 ? "white" : "blue" }}>
+                            style={{ backgroundColor: selectedColorId === 2 ? "white" : "#CC9999" }}>
                             {selectedColorId === 2 && (
                               <span
                                 className='dotSelectedInline'
                                 onClick={() => setSelectedColorId(2)}
-                                style={{ backgroundColor: "blue" }}></span>
+                                style={{ backgroundColor: "#CC9999" }}></span>
                             )}
                           </span>
                           <span
@@ -68,18 +70,18 @@ function App() {
                               <span
                                 className='dotSelectedInline'
                                 onClick={() => setSelectedColorId(3)}
-                                style={{ backgroundColor: "red" }}></span>
+                                style={{ backgroundColor: "#CB99CC" }}></span>
                             )}
                           </span>
                           <span
                             className={selectedColorId === 4 ? "dotSelected" : "dot"}
                             onClick={() => setSelectedColorId(4)}
-                            style={{ backgroundColor: selectedColorId === 4 ? "white" : "gray" }}>
+                            style={{ backgroundColor: selectedColorId === 4 ? "white" : "#A6CC99" }}>
                             {selectedColorId === 4 && (
                               <span
                                 className='dotSelectedInline'
                                 onClick={() => setSelectedColorId(4)}
-                                style={{ backgroundColor: "gray" }}></span>
+                                style={{ backgroundColor: "#A6CC99" }}></span>
                             )}
                           </span>
                         </div>
