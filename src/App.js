@@ -1,36 +1,89 @@
 import { products } from "./database/db";
 import colImage from "./assets/colImage.png";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [selectedColorId, setSelectedColorId] = useState(1);
   return (
-    <div className='container m-5'>
-      <div className='card mb-3' style={{ maxWidth: "1540px" }}>
+    <div className='appContainer'>
+      <div className='card mb-3'>
         <div className='row g-0'>
-          <div className='col-md-4'>
-            <img src={colImage} className='img-fluid rounded-start colImage' alt='colImage' />
+          <div className='col-md-6 relativeCol'>
+            <img src={colImage} className='img-fluid colImage' alt='colImage' />
           </div>
-          <div className='col-md-8'>
-            <div className='card-body'>
-              <h5 className='card-title'>Everyday items, we have something to suit every occasion.</h5>
-              <p className='card-text'>Everyday items, we have something to suit every occasion.</p>
-              <p className='card-text'>
-                <small className='text-muted'>Shop all everyday items</small>
-              </p>
+          <div className='col-md-6 relativeCol'>
+            <div className=''>
+              <div className='m-5'>
+                <h4 className='headerTitle'>Everyday items, we have something to suit every occasion.</h4>
+              </div>
+              <div className='m-5'>
+                <span className='headerDescription' href='/'>
+                  At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo
+                  gravida cursus.
+                </span>
+              </div>
+              <div className='m-5'>
+                <a className='headerLink'>Shop all everyday items</a>
+              </div>
             </div>
-            <hr />
-            <div className='row g-0'>
+            {/* <hr /> */}
+            <div className='row g-0 productsCardsContainer'>
               {products.map(({ id, productName, price, color, url }, index) => (
                 <div className='col-md-4' key={id}>
-                  <div className='card' style={{ width: "18rem" }}>
-                    <img src={require(`${url}`)} className='card-img-top' alt={productName} />
+                  <div className='card' style={{ width: "225px" }}>
+                    <img src={require(`${url}`)} className='card-img-top productsImage' alt={productName} />
                     <div className='card-body'>
-                      <h5 className='card-title'>{productName}</h5>
-                      <p className='card-text'>€{price}</p>
-                      <span className='btn btn-primary'>1 colors</span>
-                      <span className='btn btn-primary'>2 colors</span>
-                      <span className='btn btn-primary'>3 colors</span>
-                      <span className='btn btn-primary'>4 colors</span>
+                      <h5 className='productName'>{productName}</h5>
+                      <div className='row g-0 productsCards'>
+                        <div className='col-md-5 price'>€{price}</div>
+                        <div className='col-md-7 colorDots'>
+                          <span
+                            className={selectedColorId === 1 ? "dotSelected" : "dot"}
+                            onClick={() => setSelectedColorId(1)}
+                            style={{ backgroundColor: selectedColorId === 1 ? "white" : "green" }}>
+                            {selectedColorId === 1 && (
+                              <span
+                                className='dotSelectedInline'
+                                onClick={() => setSelectedColorId(1)}
+                                style={{ backgroundColor: "green" }}></span>
+                            )}
+                          </span>
+                          <span
+                            className={selectedColorId === 2 ? "dotSelected" : "dot"}
+                            onClick={() => setSelectedColorId(2)}
+                            style={{ backgroundColor: selectedColorId === 2 ? "white" : "blue" }}>
+                            {selectedColorId === 2 && (
+                              <span
+                                className='dotSelectedInline'
+                                onClick={() => setSelectedColorId(2)}
+                                style={{ backgroundColor: "blue" }}></span>
+                            )}
+                          </span>
+                          <span
+                            className={selectedColorId === 3 ? "dotSelected" : "dot"}
+                            onClick={() => setSelectedColorId(3)}
+                            style={{ backgroundColor: selectedColorId === 3 ? "white" : "red" }}>
+                            {selectedColorId === 3 && (
+                              <span
+                                className='dotSelectedInline'
+                                onClick={() => setSelectedColorId(3)}
+                                style={{ backgroundColor: "red" }}></span>
+                            )}
+                          </span>
+                          <span
+                            className={selectedColorId === 4 ? "dotSelected" : "dot"}
+                            onClick={() => setSelectedColorId(4)}
+                            style={{ backgroundColor: selectedColorId === 4 ? "white" : "gray" }}>
+                            {selectedColorId === 4 && (
+                              <span
+                                className='dotSelectedInline'
+                                onClick={() => setSelectedColorId(4)}
+                                style={{ backgroundColor: "gray" }}></span>
+                            )}
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -39,17 +92,6 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <div className='card text-bg-dark'>
-        <img src='...' className='card-img' alt='...' />
-        <div className='card-img-overlay'>
-          <h5 className='card-title'>Card title</h5>
-          <p className='card-text'>
-            This is a wider card with supporting text below as a natural lead-in to additional content. This content is
-            a little bit longer.
-          </p>
-          <p className='card-text'>Last updated 3 mins ago</p>
-        </div>
-      </div> */}
     </div>
   );
 }
