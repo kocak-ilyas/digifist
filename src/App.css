@@ -79,11 +79,9 @@
 
 .productsCardsContainer {
   margin-left: 10px !important;
-  overflow-y: hidden;
-  overflow-x: scroll;
   width: 97%;
-  min-width: 766px !important;
   padding-left: 39px;
+  position: relative;
 }
 
 .productsCards {
@@ -152,4 +150,29 @@
   position: absolute;
   top: 2px;
   left: 2px;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  overflow-x: hidden;
+}
+
+.arrowButton {
+  cursor: pointer;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.arrowBack {
+  top: 141px;
+  left: 48px;
+}
+
+.arrowForward {
+  top: 141px;
+  right: 14px;
 }
