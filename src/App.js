@@ -24,7 +24,7 @@ function App() {
                 </span>
               </div>
               <div className='m-5'>
-                <a className='headerLink'>Shop all everyday items</a>
+                <a href="/" className='headerLink'>Shop all everyday items</a>
               </div>
             </div>
             {/* <hr /> */}
