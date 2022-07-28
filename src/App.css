@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   background: #ffffff;
+  margin-bottom: 10%;
 }
 
 .relativeCol {
@@ -21,7 +22,10 @@
   height: 864px;
   left: 0px;
   top: 0px;
-  opacity: 0.2;
+}
+
+.titleContainer {
+  margin: 3rem !important;
 }
 
 .headerTitle {
@@ -169,10 +173,53 @@
 
 .arrowBack {
   top: 141px;
-  left: 48px;
+  left: 7%;
 }
 
 .arrowForward {
   top: 141px;
-  right: 14px;
+  right: 7%;
+}
+
+/* Mobile Vers. */
+@media screen and (max-width: 1250px) {
+  .headerTitle {
+    width: 95%;
+  }
+  .headerDescription {
+    width: 95%;
+  }
+  .headerLink {
+    width: 95%;
+  }
+  .titleContainer {
+    margin: 1rem 1rem 1rem 3rem !important;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .mobileTitle {
+    margin-top: 62% !important;
+  }
+
+  .colImage {
+    width: 100%;
+  }
+
+  .headerTitle {
+    color: #ffffff;
+    width: 85%;
+  }
+
+  .headerDescription {
+    display: none;
+  }
+
+  .headerLink {
+    color: #ffffff;
+    width: 85%;
+  }
+  .col-lg-6 {
+    width: 100% !important;
+  }
 }

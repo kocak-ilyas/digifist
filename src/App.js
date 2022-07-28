@@ -43,21 +43,21 @@ function App() {
     <div className='appContainer'>
       <div className='card mb-3'>
         <div className='row g-0'>
-          <div className='col-md-6 relativeCol'>
+          <div className='col-sm-12 col-lg-6 relativeCol'>
             <img src={colImage} className='img-fluid colImage' alt='colImage' />
           </div>
-          <div className='col-md-6 relativeCol'>
-            <div className=''>
-              <div className='m-5'>
+          <div className='col-sm-12 col-lg-6 relativeCol mobileTitle'>
+            <div>
+              <div className='titleContainer'>
                 <h4 className='headerTitle'>Everyday items, we have something to suit every occasion.</h4>
               </div>
-              <div className='m-5'>
+              <div className='titleContainer'>
                 <span className='headerDescription' href='/'>
                   At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo
                   gravida cursus.
                 </span>
               </div>
-              <div className='m-5'>
+              <div className='titleContainer'>
                 <a href='/' className='headerLink'>
                   Shop all everyday items
                 </a>
@@ -67,7 +67,7 @@ function App() {
               <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} className='scrollMenu'>
                 {products.map(({ id, productName, price, color, url }, index) => (
                   <div
-                    className='col-md-4'
+                    className='col-lg-4'
                     key={id}
                     style={{ width: `280px` }}
                     itemID={id}
@@ -79,8 +79,8 @@ function App() {
                       <div className='card-body'>
                         <h5 className='productName'>{productName}</h5>
                         <div className='row g-0 productsCards'>
-                          <div className='col-md-5 price'>€{price}</div>
-                          <div className='col-md-7 colorDots'>
+                          <div className='col-lg-5 price'>€{price}</div>
+                          <div className='col-lg-7 colorDots'>
                             <span
                               className={selectedColorId === 1 ? "dotSelected" : "dot"}
                               onClick={() => setSelectedColorId(1)}
