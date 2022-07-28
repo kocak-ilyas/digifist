@@ -22,3 +22,12 @@
 <h6>Gmail               : kocakilyas18@gmail.com </h6>
 <h6>GitHub              : https://github.com/kocak-ilyas</h6>
 <hr/>
+<br/>
+
+###### for Desktop
+
+<img src="./src/assets/desktop.png" alt="desktop.png"/>
+
+###### for Mobile:
+
+<img src="./src/assets/mobile.png" alt="mobile.png"/>
